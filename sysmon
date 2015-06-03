@@ -54,5 +54,29 @@
 				</example>
 			</examples>
 		</rule>
+		
+			<rule provider="DefensiveDepth-SYSMON3" class='10780' id='10780'>
+			<patterns>
+				<pattern>@NUMBER::@@ESTRING::(@@ESTRING::)@ @IPv4::@->WinEvtLog @ESTRING::(@@NUMBER::):@): @ESTRING:::@ SYSTEM: NT AUTHORITY: @ESTRING:s0::@ @ESTRING:: SequenceNumber:@ @NUMBER::@ @ESTRING:: SourceProcessGuid:@ {@ESTRING:s1:}@ @ESTRING:: SourceImage: @@ESTRING:s2:  TargetProcessGuid: {@@ESTRING:s3:}@@ESTRING:: TargetImage: @@ESTRING:s4:  NewThreadId:@</pattern>
+	                </patterns>
+
+			<examples>
+				<example>
+					<test_message program="ossec_archive">2015 Jun 02 02:18:10 (windows7_x64) 192.168.142.6->WinEvtLog 2015 Jun 01 15:53:02 WinEvtLog: Microsoft-Windows-Sysmon/Operational: INFORMATION(8): Microsoft-Windows-Sysmon: SYSTEM: NT AUTHORITY: WIN-KTL39CHEPFC: CreateRemoteThread detected:  SequenceNumber: 599  UtcTime: 6/1/2015 09:53:02.371 PM  SourceProcessGuid: {F17228B0-CB16-556C-0000-0010A6A90000}  SourceProcessId: 468  SourceImage: C:\Windows\System32\csrss.exe  TargetProcessGuid: {F17228B0-CC30-556C-0000-0010B6510500}  TargetProcessId: 1668  TargetImage: C:\Windows\System32\cmd.exe  NewThreadId: 756</test_message>
+						<!-- host-->
+						<test_value name="s0">WIN-KTL39CHEPFC</test_value>
+						<!-- sourceprocessguid-->
+						<test_value name="s1">F17228B0-CB16-556C-0000-0010A6A90000</test_value>
+						<!-- image-->
+						<test_value name="s2">C:\Windows\System32\csrss.exe</test_value>
+						<!-- targetProcessGuid-->
+						<test_value name="s3">F17228B0-CC30-556C-0000-0010B6510500</test_value>
+						<!-- targetimage-->
+						<test_value name="s4">C:\Windows\System32\cmd.exe</test_value>
+                                                                                           
+				</example>
+			</examples>
+		</rule>
+
 	</rules>
 </ruleset>
