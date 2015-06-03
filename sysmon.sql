@@ -40,7 +40,7 @@ INSERT IGNORE INTO fields_classes_map (class_id, field_id, field_order) VALUES (
 
 
 /*  Creates SYSMON_REMOTETHREAD Class & associated fields */
-INSERT IGNORE INTO classes (id, class) VALUES (10780, "SYSMON_REMOTETHREAD");
+INSERT IGNORE INTO classes (id, class) VALUES (10781, "SYSMON_REMOTETHREAD");
 
 INSERT IGNORE INTO fields (field, field_type, pattern_type) VALUES ("hostname","string", "QSTRING");  
 INSERT IGNORE INTO fields (field, field_type, pattern_type) VALUES ("sourceprocessguid","string", "QSTRING");
