@@ -55,7 +55,7 @@
 			</examples>
 		</rule>
 		
-			<rule provider="DefensiveDepth-SYSMON3" class='10781' id='10781'>
+			<rule provider="DefensiveDepth-SYSMON3" class='10777' id='10777'>
 			<patterns>
 				<pattern>@NUMBER::@@ESTRING::(@@ESTRING::)@ @IPv4::@->WinEvtLog @ESTRING::(@@NUMBER::):@): @ESTRING:::@ SYSTEM: NT AUTHORITY: @ESTRING:s0::@ @ESTRING:: SequenceNumber:@ @NUMBER::@ @ESTRING:: SourceProcessGuid:@ {@ESTRING:s1:}@ @ESTRING:: SourceImage: @@ESTRING:s2:  TargetProcessGuid: {@@ESTRING:s3:}@@ESTRING:: TargetImage: @@ESTRING:s4:  NewThreadId:@</pattern>
 	                </patterns>
