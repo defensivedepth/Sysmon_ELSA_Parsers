@@ -67,7 +67,7 @@
 						<test_value name="s0">WIN-KTL39CHEPFC</test_value>
 						<!-- sourceprocessguid-->
 						<test_value name="s1">F17228B0-CB16-556C-0000-0010A6A90000</test_value>
-						<!-- image-->
+						<!-- sourceimage-->
 						<test_value name="s2">C:\Windows\System32\csrss.exe</test_value>
 						<!-- targetProcessGuid-->
 						<test_value name="s3">F17228B0-CC30-556C-0000-0010B6510500</test_value>
