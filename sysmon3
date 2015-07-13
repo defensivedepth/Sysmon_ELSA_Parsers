@@ -5,7 +5,7 @@
 		
 		<rule provider="DefensiveDepth-SYSMON3" class='10777' id='10777'>
 			<patterns>
-				<pattern>@NUMBER::@@ESTRING::(@@ESTRING::)@ @IPv4::@->WinEvtLog @ESTRING::(@@NUMBER::):@): @ESTRING:::@ SYSTEM: NT AUTHORITY: @ESTRING:s0::@ @ESTRING:: SequenceNumber:@ @NUMBER::@ @ESTRING:: SourceProcessGuid:@ {@ESTRING:s1:}@ @ESTRING:: SourceImage: @@ESTRING:s2:  TargetProcessGuid: {@@ESTRING:s3:}@@ESTRING:: TargetImage: @@ESTRING:s4:  NewThreadId:@</pattern>
+				<pattern>@NUMBER::@@ESTRING::(@@ESTRING::)@ @IPv4::@->WinEvtLog @ESTRING::(@@NUMBER::):@): @ESTRING:::@ SYSTEM: NT AUTHORITY: @ESTRING:s0::@ @ESTRING:: SequenceNumber:@ @NUMBER::@ @ESTRING:: SourceProcessGuid:@ {@ESTRING:s1:}@ @ESTRING:: SourceImage: @@ESTRING:s2:  TargetProcessGuid: {@@ESTRING:s4:}@@ESTRING:: TargetImage: @@ESTRING:s5:  NewThreadId:@</pattern>
 	                </patterns>
 
 			<examples>
@@ -18,9 +18,9 @@
 						<!-- sourceimage-->
 						<test_value name="s2">C:\Windows\System32\csrss.exe</test_value>
 						<!-- targetProcessGuid-->
-						<test_value name="s3">F17228B0-CC30-556C-0000-0010B6510500</test_value>
+						<test_value name="s4">F17228B0-CC30-556C-0000-0010B6510500</test_value>
 						<!-- targetimage-->
-						<test_value name="s4">C:\Windows\System32\cmd.exe</test_value>
+						<test_value name="s5">C:\Windows\System32\cmd.exe</test_value>
                                                                                            
 				</example>
 			</examples>
